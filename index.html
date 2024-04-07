@@ -1,0 +1,212 @@
+<html>
+  <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./AmogOS.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"
+    
+    />
+    <style>
+        :root {
+        --bgColor: #33a8ff;
+        --textColor: #000000;
+        --btnColor: RGBA(0, 0, 0, 0.25);
+        --btnColorHvr: RGBA(0, 0, 0, 0.5);
+      }
+
+      */*{
+        font-family: "Silkscreen", sans-serif;
+      }*/
+
+      .mnuTitle {
+        margin-top: 60px;
+        font-family: "Silkscreen", sans-serif;
+      }
+
+      body {     
+        overflow: hidden;
+        /* background-color: VAR(--bgColor); */
+        font-family: "Arial", sans-serif;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background: linear-gradient(
+          -45deg,
+          #fb6a61,
+          #fb6b8c,
+          #ec77b3,
+          #d287d0,
+          #b197e2,
+          #8caaf5,
+          #61bbfc,
+          #38caf7,
+          #18e0e9,
+          #66f0cb,
+          #b0fba9,
+          #faff93
+        );
+
+        background-size: 500% 500%;
+        animation: gradient 12s ease infinite;
+               }
+
+               
+
+      .mnuRow {
+        font-family: "Nova Square", sans-serif;
+        width: 235px;
+        height: 40px;
+        background: var(--btnColor);
+        transition: all 0.2s ease-in-out;
+        padding: 0 20px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        border: solid 1px RGBA(0, 0, 0, 0.5);
+        margin-bottom: 16px;
+        
+      }
+
+      .mnuRow:hover {
+        background-color: var(--btnColorHvr);
+        border: solid 1px RGBA(255, 255, 255, 0.8);
+        color: #ffffff;
+      }
+
+      .mnuRow:hover .iconImg,
+      .mnuRow:hover .linkTitle {
+        opacity: 1;
+      }
+
+      .iconImg {
+        margin-right: 20px;
+        opacity: 0.2;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .linkTitle {
+        opacity: 0.75;
+      }
+
+      h2 {
+        font-size: 55px;
+        margin-bottom: 30px;
+        color: var(--textColor);
+      }
+
+      a {
+        font-size: 30px;
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: var(--textColor);
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      
+    </style>
+  </head>
+
+
+  
+   <body>
+    <h2 class="mnuTitle">My Menu</h2>
+    <div>
+      <a
+        id="Sonarr"
+        href="http://99.245.10.77:8888"
+        target="_blank"
+        class="mnuRow"
+      >
+        <img src="./sonarr.svg" alt="Sonarr Icon" class="iconImg" />
+        <span class="linkTitle">Sonarr</span>
+        
+      </a>
+      <a
+        id="Radarr"
+        href="http://99.245.10.77:7950"
+        target="_blank"
+        class="mnuRow"
+      >
+        <img src="./radarr.svg" alt="Radarr Icon" class="iconImg" />
+        <span class="linkTitle">Radarr</span>
+      </a>
+      <a
+        id="Jellyfin"
+        href="http://99.245.10.77:9005"
+        target="_blank"
+        class="mnuRow"
+      >
+        <img src="./jellyfin.svg" alt="Jellyfin Icon" class="iconImg" />
+        <span class="linkTitle">Jellyfin</span>
+      </a>
+      <a
+        id="SABnzbd"
+        href="http://99.245.10.77:8121"
+        target="_blank"
+        class="mnuRow"
+      >
+        <img src="./sabnzbd.png" alt="SABnzbd Icon" class="iconImg" />
+        <span class="linkTitle">SABnzbd</span>
+      </a>
+      <a
+        id="Qbittorent"
+        href="http://99.245.10.77:8085"
+        target="_blank"
+        class="mnuRow"
+      >
+        <img src="./qbittorent.png" alt="Qbittorent Icon" class="iconImg" />
+        <span class="linkTitle">Qbittorent</span>
+      </a>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var Sonarr = document.getElementById("Sonarr");
+        var Radarr = document.getElementById("Radarr");
+        var Jellyfin = document.getElementById("Jellyfin");
+        var SABnzbd = document.getElementById("SABnzbd");
+        var Qbittorent = document.getElementById("Qbittorent");
+
+        var currentHost = window.location.hostname;
+
+        if (currentHost === "192.168.0.212") {
+          Sonarr.href = "http://192.168.0.212:8888";
+          Radarr.href = "http://192.168.0.212:7950";
+          Jellyfin.href = "http://192.168.0.212:9005";
+          SABnzbd.href = "http://192.168.0.212:8121";
+          Qbittorent.href = "http://192.168.0.212:8085";
+        } else {
+          Sonarr.href = "http://99.245.10.77:8888";
+          Radarr.href = "http://99.245.10.77:7950";
+          Jellyfin.href = "http://99.245.10.77:9005";
+          SABnzbd.href = "http://99.245.10.77:8121";
+          Qbittorent.href = "http://99.245.10.77:8085";
+        }
+      });
+    </script>
+  </body>
+</html>
