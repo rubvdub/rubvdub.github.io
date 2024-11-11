@@ -138,7 +138,7 @@
     <div>
       <a
         id="Sonarr"
-        href="http://99.245.10.77:8888"
+        href="http://172.97.142.120:8888"
         target="_blank"
         class="mnuRow"
       >
@@ -148,7 +148,7 @@
       </a>
       <a
         id="Radarr"
-        href="http://99.245.10.77:7950"
+        href="http://172.97.142.120:7950"
         target="_blank"
         class="mnuRow"
       >
@@ -157,7 +157,7 @@
       </a>
       <a
         id="Jellyfin"
-        href="http://99.245.10.77:9005"
+        href="http://172.97.142.120:9005"
         target="_blank"
         class="mnuRow"
       >
@@ -166,7 +166,7 @@
       </a>
       <a
         id="SABnzbd"
-        href="http://99.245.10.77:8121"
+        href="http://172.97.142.120:8121"
         target="_blank"
         class="mnuRow"
       >
@@ -175,7 +175,7 @@
       </a>
       <a
         id="Qbittorent"
-        href="http://99.245.10.77:8085"
+        href="http://172.97.142.120"
         target="_blank"
         class="mnuRow"
       >
@@ -193,18 +193,18 @@
 
         var currentHost = window.location.hostname;
 
-        if (currentHost === "192.168.0.212") {
-          Sonarr.href = "http://192.168.0.212:8888";
-          Radarr.href = "http://192.168.0.212:7950";
-          Jellyfin.href = "http://192.168.0.212:9005";
-          SABnzbd.href = "http://192.168.0.212:8121";
-          Qbittorent.href = "http://192.168.0.212:8085";
+        if (currentHost === "192.168.68.55") {
+          Sonarr.href = "http://192.168.68.55:8888";
+          Radarr.href = "http://192.168.68.55:7950";
+          Jellyfin.href = "http://192.168.68.55:9005";
+          SABnzbd.href = "http://192.168.68.55:8121";
+          Qbittorent.href = "http://192.168.68.55:8085";
         } else {
-          Sonarr.href = "http://99.245.10.77:8888";
-          Radarr.href = "http://99.245.10.77:7950";
-          Jellyfin.href = "http://99.245.10.77:9005";
-          SABnzbd.href = "http://99.245.10.77:8121";
-          Qbittorent.href = "http://99.245.10.77:8085";
+          Sonarr.href = "http://172.97.142.120:8888";
+          Radarr.href = "http://172.97.142.120:7950";
+          Jellyfin.href = "http://172.97.142.120:9005";
+          SABnzbd.href = "http://172.97.142.120:8121";
+          Qbittorent.href = "http://172.97.142.120:8085";
         }
       });
     </script>
